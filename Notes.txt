@@ -1,0 +1,101 @@
+World is currently working to store data on DNA. But it is costly. It takes $7000 to store 2 MB of data and $2000 to read that data again.
+What is deep learning ?
+Geoffrey Hinton is god father of deep learning.
+Here we create a artificial structure called as artificial neural net where we have nodes or neurons. Some neurons are for input values and there will be a output value. In between input and output, there are hidden layers
+
+Part 1 - Artificial neural networks
+Objective:
+The intuition of ANN
+The Neuron : 
+A neuron is a basic unit of neural system in human.
+A neuron have body consist of a neuron, Dendrites, and a Axon
+Dendrites are the receivers of signal and dedrites are carrier of the signal.
+There is a gap between dendrites and the axon is called syanpses
+
+A neuron will get some input values and it will give a output value just like a human brain
+#Human brain is placed inside a black box i.e It can see, smell anything but it receives impulses from sensory organs (input values) and produce a output value (output).
+
+Input variables are independent variable (It just a observation i.e One row in a database)
+We need to standardize the input variables (Mean as zero and variance as one) or need to normalize.
+
+The output value can be
+Continuous value
+Binary value
+Categorical value
+
+#The input value (single row) which we are putting in will produce an ouput for the same row's observation
+ 
+syanpses : They are the weighted signals. Here weights are crucial because that's how the neural network learns.By adjusting the weights, network decides what signal is important and which is not.Which signal should pass 
+along and which signal does not contribute in the output.
+
+Inside the neuron : Once the neuron receives the input with the associated weights, it calculates the weighted sum of all the inputs.
+summation(WiXi). Then it applies the activation function to the weighted sum and passes that further.
+-----------------------------------------------------------------------------------
+The activation function :
+The predominant 4 types of function :
+1. Threshold function: f(x) = 1 if x>= 1 or 0 if x<0
+2. Sigmoid function : f(x) = 1/(1+e^-x)
+3. Rectifier : f(x) = max(x,0)
+4. Hyperbolic Tangent: f(x) = (1-e^-2x)/(1+e^-2x)
+
+How do Neural network works ?
+
+How do neural networks learn ?
+There are two approaches for learning
+1. Hard coded
+2. Neural network : 
+Firstly we have the input layers which is made up of only one observation from the DB.
+Then we pass on the input values to neuron through syanpses. Here syanpses are the weights
+Then we calculate the weigthed sum of all the input variables then pass that through a activation funcion.
+Then the output of that function is passed to output layer where it will predict the output as y'
+We have the actual output as y
+Then we calculate the cost function. There are various cost function available. Cost funtion tells us about the 
+error between the predicted output vs actual output.
+For example; cost function = 1/2(y'-y)^2
+Then we will feed back the cost to the network according to which the weights are adjusted and again the whole procedure repeats till we have a 
+minimized cost function
+##Goal : To adjust the weights so that the cost function is minimized.
+
+One epoch : When we go through a whole dataset and we train the network on all the rows.
+
+Gradient descent:
+This decides how the weights are adjusted
+There are multiple approaches to minimize cost function by adjusting the weights.
+1. Brute Force approach:
+    Here we take all the possible weights and look them and which is better
+Curse of dimensionality : 
+Let's take an example
+Let us consider an neural network with 4 input layers and one hidden layes with 5 neurons
+To use brute force approach, we need to consider all the possible weights adjustments to decide which one is better
+As per the calculations,
+Initially there will be 25 weights to be considered -> (4 * 5) + 5 (from hidden layers)
+To brute force all the 25 weights,
+If we have 1000 combinations to test through all the 25 weights
+It will be calculates as
+1000 * 1000 * .....*1000 = 1000^25 = 10^75 combinations of weights
+To run this computation, even the world's fastest computer is not sufficient
+Because,
+The world's fastest computer is Sunway TaihuLight
+Which have a speed of 93 PFLOPS that means it can do 93*10^15 peta floating operation per second
+
+Whereas the average computer performs several gigaflops only.
+
+Let's assume it hypothetically that it can test one combination of the neural network from all the 10^75 combinations available 
+in one flop. That is actually not possible because we need multiple flops to do it.
+
+Still if we assume like this the also it will require
+10^75/(93*10^15) seconds to brute force all the weights in a simple network.
+If we calculate above seconds it sums up to
+10^75/(93*10^15) = 1.08 * 10^58 seconds = 3.42*10^50 years.
+
+The fact that this above number is so much longer than our universe has existed.
+Our universe is 13.8 billion years old.
+
+Stochastiic Descent:
+
+Back propagation :
+
+
+
+How to build an ANN
+How to predict outcome of single observation
