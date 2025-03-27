@@ -91,11 +91,28 @@ If we calculate above seconds it sums up to
 The fact that this above number is so much longer than our universe has existed.
 Our universe is 13.8 billion years old.
 
+We need to find a fastest way to optimize the weights
+For that we will use Gradient Descent, first we will plot the cost function and decide a random point on the plot and 
+we will calculate the slope at that point that is we calculate the gradient at that point and decide whether to go to the right or left acc to slope
+If slope is negative, then we will go right and if the slope is positive then we will go left
+After repeating these steps, we will reach to the minima of the function where the cost is minimum. That combination will be the best combination of weights.
+
 Stochastiic Descent:
+Gradient descent function needs a convex function.
+For non convex function with multiple minimas we need to use stochastic function.
+In stochastic, we take one row at a time and proecess it trhough the network and optimize the cost function and update the weights for that row only.
 
 Back propagation :
+First we forward the inputs to with the weight along the hidden layers. Then we calculate the error between predicted and actual value and 
+feed back the error along the network again to adjust the weight to minimize the error.
 
-
+Steps to train the ANN with stochastic Gradient Descent:
+1. Randomly initialise the weights to small numbers close to 0. Not 0.
+2. Input the first observation of your dataset in the input layer, each feature in one input node.
+3. Forward-Propagation from left to right, the neurons are activated in a way that the impact of each neuron's activation is limited by the weights. Propagate the activations until getting the predicted result y'.
+4. Compare the predicted result to actual result. Measure the generated error.
+5. Back propagation: From right to left, the error is back propagated. Update the weights according to how much they are responsible for the error. The learning rate decides by how much we update the weights.
+6. Repeat steps 1 to 5 and update the weights after each observation (Reinforcement learning) or Repeat steps 1 to 5 but update the weights only after a batch of observations (Batch learning)
 
 How to build an ANN
 How to predict outcome of single observation
