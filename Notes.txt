@@ -116,3 +116,17 @@ Steps to train the ANN with stochastic Gradient Descent:
 
 How to build an ANN
 How to predict outcome of single observation
+
+
+#Convolutional neural network
+Plan
+1. What is CNN 
+2. step1 - Convolution operation
+3. step1 b - ReLU layer
+4. step2 - Pooling
+5. step3 - Flattening.
+6. step4 - Full connection
+7. Summary
+
+
+
