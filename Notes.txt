@@ -128,5 +128,11 @@ Plan
 6. step4 - Full connection
 7. Summary
 
+Recurrent Neural network
+The idea behind Recurrent neural network
+The vanishing Gradient Problem
+Long short term Memory
+Practical intuition
+
 
 
